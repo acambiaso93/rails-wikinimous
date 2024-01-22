@@ -1,0 +1,14 @@
+<div class="row
+  justify-content-md-center">
+  <div class="col-sm-12 col-md-8 col-lg-8">
+    <div class=show-text>
+      <h2 id="new-text"><%= @article.title %>
+      <%= link_to '<i class="fa-regular fa-pen-to-square"></i>'.html_safe, edit_article_path(@article) %>
+      <%= link_to '<i class="fa-regular fa-trash-can"></i>'.html_safe,
+      article_path(@article),
+      data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+      %></h2>
+    </div>
+    <p><%= @article.content %></p>
+  </div>
+</div>

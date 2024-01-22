@@ -1,0 +1,14 @@
+<div class="container mt-4">
+  <div class="row
+  justify-content-md-center">
+    <div class="col-sm-12 col-md-8 col-lg-8">
+      <% @articles.each do |article| %>
+        <div class="article">
+          <h2 id="text"><%= link_to article.title, article_path(article) %></h2>
+          <div><p style="line-height: 1.5em; height: 3em;
+          overflow: hidden;"><%= article.content %></p></div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
